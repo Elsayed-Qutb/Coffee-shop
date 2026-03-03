@@ -7,7 +7,7 @@
   box-sizing: border-box;
   font-family: "Barlow", sans-serif;
   .animate__animated {
-    --animate-duration: 2s;
+    --animate-duration: 1s;
   }
 }
 :root {
