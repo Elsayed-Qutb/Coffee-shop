@@ -3,15 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="light dark">
+    <meta name="color-scheme" content="light dark" />
     <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
       integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.css"
     />
   </head>
   <body>
@@ -40,13 +48,13 @@
         </div>
       </div>
     </div>
-
+    <div class="cursor"></div>
     <div class="section2">
       <div class="container2">
         <div id="head">
-          <h1>our collection</h1>
+          <h1 class="animate__animated animate__fadeIn wow">our collection</h1>
         </div>
-        <div class="inner2">
+        <div class="inner2 animate__animated animate__fadeIn wow">
           <div class="son2">
             <img class="img2" src="./Collection Image.png" />
             <h1>Gran Espresso</h1>
@@ -84,7 +92,7 @@
     </div>
 
     <div class="section3">
-      <div class="upper3">
+      <div class="upper3 animate__animated animate__fadeInRight wow">
         <div class="container3">
           <div class="inner3">
             <h2>Why Choose Us?</h2>
@@ -98,7 +106,7 @@
         </div>
       </div>
       <div class="lower3">
-        <div class="inner33">
+        <div class="inner33 animate__animated animate__fadeInUp wow">
           <div class="son3">
             <img class="logo3" src="./Shape.png" />
             <h2>Best quality</h2>
@@ -129,9 +137,9 @@
 
     <div class="section4">
       <div class="container4">
-        <h2>How it works</h2>
+        <h2 class="animate__animated animate__fadeIn wow">How it works</h2>
         <div class="inner4">
-          <div class="son4">
+          <div class="son4 animate__animated animate__fadeInLeft wow">
             <h1>01</h1>
             <h2>Pick your coffee</h2>
             <p>
@@ -140,7 +148,7 @@
               coffees in all profiles every month for you to try out.
             </p>
           </div>
-          <div class="son4">
+          <div class="son4 animate__animated animate__fadeIn wow">
             <h1>02</h1>
             <h2>Choose frequency</h2>
             <p>
@@ -149,7 +157,7 @@
               commitment through our online portal.
             </p>
           </div>
-          <div class="son4">
+          <div class="son4 animate__animated animate__fadeInRight wow">
             <h1>03</h1>
             <h2>Receive and enjoy!</h2>
             <p>
@@ -172,11 +180,22 @@
           <a>Create your plan</a>
         </nav>
         <div class="social">
-          <img src="./Path.svg">
-          <img src="./Path (1).svg">
-          <img src="./Shape.svg">
+          <img src="./Path.svg" />
+          <img src="./Path (1).svg" />
+          <img src="./Shape.svg" />
         </div>
       </div>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+      new WOW().init();
+      const cursor = document.querySelector(".cursor");
+
+      document.addEventListener("mousemove", (e) => {
+        cursor.style.top = e.clientY + "px";
+        cursor.style.left = e.clientX + "px";
+      });
+    </script>
   </body>
 </html>
