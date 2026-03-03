@@ -6,7 +6,23 @@
   box-sizing: border-box;
   font-family: "Barlow", sans-serif;
 }
+:root {
+  --bg-color: white;
+  --text-color: black;
+}
 
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* لما الجهاز يبقى Dark */
+@media (prefers-color-scheme: dark) {
+  :root {
+    background: white;
+    --text-color: #fff;
+  }
+}
 header {
   width: 100%;
   display: flex;
