@@ -7,7 +7,7 @@
   box-sizing: border-box;
   font-family: "Barlow", sans-serif;
   .animate__animated {
-    --animate-duration: 1s;
+    --animate-duration: 2.3s;
   }
 }
 :root {
@@ -72,6 +72,10 @@ header {
         letter-spacing: 0.92px;
         text-transform: uppercase;
         color: #83888f;
+
+        &:hover {
+          color: black;
+        }
       }
     }
     #bar {
@@ -94,7 +98,7 @@ header {
   .container1 {
     width: 1270px;
     height: 584px;
-    background-image: url("./Hero\ Image.png");
+    background-image: url("./images/Hero\ Image.png");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -111,7 +115,7 @@ header {
       padding: 7px;
       background-image:
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(42, 41, 41, 0.411)),
-        url("./Hero\ Image.png");
+        url("./images/Hero\ Image.png");
     }
 
     .inner1 {
@@ -190,11 +194,11 @@ header {
       line-height: 140%;
       letter-spacing: 0px;
       text-align: center;
-  
+
       /* Hover */
       &:hover {
         color: #fff;
-        background-color: #A67B5B;
+        background-color: #a67b5b;
         box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
         transform: translateY(-2px);
       }
@@ -687,10 +691,10 @@ header {
       text-align: center;
       color: var(--colors-neutral-50, rgba(254, 252, 247, 1));
 
-       /* Hover */
+      /* Hover */
       &:hover {
         color: #fff;
-        background-color: #A67B5B;
+        background-color: #a67b5b;
         box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
         transform: translateY(-2px);
       }
@@ -774,6 +778,9 @@ footer {
         letter-spacing: 0.92px;
         text-transform: uppercase;
         color: #83888f;
+        &:hover {
+          color: white;
+        }
         @media screen and (max-width: 767px) {
           /* width: 120px; */
           font-family: Barlow;
@@ -797,19 +804,30 @@ footer {
       align-items: center;
       justify-content: space-between;
       gap: 24px;
+      img {
+        &:hover {
+          
+          color: var(--colors-orange-200, rgba(253, 214, 186, 1));
+;
+        }
+      }
     }
   }
 }
 .cursor {
-  position: fixed;       /* عشان تتحرك مع الشاشة */
+  position: fixed; /* عشان تتحرك مع الشاشة */
   top: 0;
   left: 0;
-  width: 15px;           /* حجم الكرة */
+  width: 15px; /* حجم الكرة */
   height: 15px;
   background-color: #f2b88e; /* لون قهوة */
-  border-radius: 50%;    /* شكل دائرة */
-  pointer-events: none;  /* ما تمنعش الكليك */
+  border-radius: 50%; /* شكل دائرة */
+  pointer-events: none; /* ما تمنعش الكليك */
   transform: translate(-50%, -50%); /* المركز */
   transition: 0.1s ease; /* Smooth حركة */
   z-index: 9999;
+
+  @media screen and (max-width:767px) {
+        display: none;
+      }
 }
